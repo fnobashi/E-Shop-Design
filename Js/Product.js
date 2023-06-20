@@ -86,4 +86,13 @@ $(document).ready(function () {
         });
     });    
 
+    $("#ImageZoom").ezPlus({
+        zoomType: 'inner',
+        cursor: 'default' , 
+        borderSize : 2  , 
+        borderColour : "#eeeeee"  , 
+        zoomWindowFadeIn: 300 ,
+        zoomWindowFadeOut: 300 , 
+    });
+
 });
