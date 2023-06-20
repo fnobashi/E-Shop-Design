@@ -5,7 +5,7 @@
     border:1px solid darken($color: map-get($colors , "light") , $amount: 10%);
     @include border-radius(15px);
     outline:none !important;
-    padding: 15px 10px;
+    padding: 10px;
 }
 textarea.form-control{
     @extend %form-control;  
