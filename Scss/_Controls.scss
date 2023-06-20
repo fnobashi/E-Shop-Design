@@ -1,0 +1,29 @@
+%form-control{
+    width: 100%;
+    display: block;
+    background-color:map-get($map: $colors ,  $key: "light");
+    border:1px solid darken($color: map-get($colors , "light") , $amount: 10%);
+    @include border-radius(15px);
+    outline:none !important;
+    padding: 15px 10px;
+}
+textarea.form-control{
+    @extend %form-control;  
+    @include border-radius(15px 15px 15px 0);
+    resize: vertical !important;
+}   
+
+input.form-control{
+    @extend %form-control;
+}
+
+
+.btn{
+    padding: 10px 20px;
+    font-family: "VazirWithoutLatin" , Vazir , Yekan;
+    font-size: 14px;
+    color: #000;
+    @include border-radius(100px);
+    border: none;
+    outline: none;
+}

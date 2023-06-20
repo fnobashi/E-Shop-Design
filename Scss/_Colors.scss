@@ -1,0 +1,72 @@
+@import "Mixins.scss";
+
+
+$colors :(
+    "White" : #ffffff , 
+    "light" : #eeeeee , 
+    "black": #000000 , 
+    "primary" : #651fff ,
+    "text" : #616161 , 
+    "gray" : #999999 , 
+    "dark-gray" : #474747 ,
+    "red" :#ef4343,
+    );
+
+$darkThemeColors:(
+    "dark-theme-primary" : #040A0E,
+);
+
+
+@include setThemeStyles("dark") {
+    @each $colorName,
+    $color in $darkThemeColors {
+        .color-#{$colorName} {
+            color: $color !important;
+        }
+
+        .bg-color-#{$colorName} {
+            background-color: $color !important;
+        }
+
+        .border-color-#{$colorName} {
+            border-color: $color !important;
+        }
+
+        .btn-#{$colorName} {
+            background-color: $color !important;
+        }
+    }
+}
+
+
+@each $colorName,
+$color in $colors {
+    .color-#{$colorName} {
+        color: $color !important;
+    }
+
+    .bg-color-#{$colorName} {
+        background-color: $color !important;
+    }
+
+    .border-color-#{$colorName} {
+        border-color: $color !important;
+    }
+
+    .hover-color-#{$colorName}{
+        @include transition(color .2s ease-in-out);
+        &:hover{
+            color:$color !important;
+        }
+    }
+    .btn-#{$colorName} {
+        background-color: map-get($map: $colors, $key:"light" ) !important;
+        @include transition(background-color .3s ease-in);
+        &:hover{
+            color: map-get($map: $colors, $key:"light") !important;
+            color: map-get($map: $colors, $key:"light") !important;
+
+            background-color: $color !important;
+        }
+    }
+}

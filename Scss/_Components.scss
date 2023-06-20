@@ -1,0 +1,205 @@
+@import 'Mixins.scss';
+
+// need to make container responsive somehow ....
+.container {
+    margin: 0 auto;
+    width: 1300px;
+
+    @include media-breakpoint-down(lg) {
+        width: 99.2%;
+    }
+}
+
+//// need to make container responsive somehow ....
+.push-right{
+    float: right !important;
+}
+.push-left{
+    float: left !important;
+}
+
+$alignItems: center,
+flex-end,
+flex-start,
+stretch,
+start,
+end;
+
+@each $value in $alignItems {
+    .align-items-#{$value} {
+        align-items: $value;
+    }
+}
+
+$justifyContent: center,
+flex-end,
+end,
+flex-start,
+start,
+space-between,
+space-around,
+space-evenly;
+
+@each $value in $justifyContent {
+    .justify-content-#{$value} {
+        justify-content: $value;
+    }
+}
+
+
+$textAlignItems: center,
+end,
+start,
+justify,
+left,
+right;
+
+@each $value in $textAlignItems {
+    .text-#{$value} {
+        text-align: $value !important;
+    }
+}
+
+
+$diaplayPropertyValues : flex,
+block,
+inline,
+inline-block,
+none;
+
+@each $value in $diaplayPropertyValues {
+    .d-#{$value} {
+        display: $value !important;
+    }
+}
+
+
+// Define margin and padding classes
+// you can choose how much level do you need to be created in the second argument and you
+// can choose eigther margin o padding or both spacing classes to be created
+@include spacing($property: 'margin', $upToLevel : 10);
+@include spacing('padding', 10);
+
+
+
+// Defining font Size Classes 
+// you can change the values inside $font-sizes map 
+// or you can decide not to using this classes at all by commenting out @include AddFontSizes() Code. 
+$font-sizes :("xs" : 10px,
+    "sm" : 12px,
+    "md" : 14px,
+    "lg" : 16px,
+    "xl" : 18px,
+    "xxl" : 20px,
+    "xxxl" :22px);
+
+@mixin AddFontSizes() {
+
+    @each $size,
+    $value in $font-sizes {
+        .font-size-#{$size} {
+            font-size: $value !important;
+        }
+    }
+}
+
+@include AddFontSizes();
+
+
+/// implementing width and height classes 
+@mixin AddMeasurementClasses($property) {
+    @if $property=="width" {
+        @for $index from 1 through 10 {
+            .w-#{$index}0 {
+                width: #{$index}+"0%" !important;
+            }
+        }
+    }
+
+    @else if $property=="height" {
+        @for $index from 1 through 10 {
+            .h-#{$index}0 {
+                height: #{$index}+"0%" !important;
+            }
+        }
+    }
+}
+
+@include AddMeasurementClasses("width");
+@include AddMeasurementClasses("height");
+
+
+.rounded-corners{
+    @include border-radius(50%);
+}
+
+.cursor-pointer {
+    cursor: pointer;
+}
+
+.cursor-default {
+    cursor: default;
+}
+
+
+$positionValues : static,
+relative,
+absolute,
+sticky,
+fixed;
+
+@each $value in $positionValues {
+    .position-#{$value} {
+        position: $value !important;
+    }
+}
+
+
+
+.line-sticktrough{
+    text-decoration-line: line-through !important;
+    -moz-text-decoration-line: line-through !important;
+}
+
+@mixin add-font-weight(){
+    @for $index from 1 through 9{
+        .font-weight-#{$index}00{
+            font-weight: #{$index}00 !important;
+        }
+    }
+}
+
+@include add-font-weight();
+
+
+
+
+// defiend a progress bar for my theme
+.progress{
+    &[Value]{
+        -moz-appearance: none !important;
+        -webkit-appearance: none !important;
+        appearance: none !important;
+        --color: #651fff ;
+        --background: #999999;
+        height: 4px;
+        background-color: darken($color: map-get($map: $colors, $key:"light" ), $amount: 10%) ;
+        border: none;
+        @include border-radius(4px);
+
+        &::-moz-progress-bar{
+            background: map-get($map: $colors, $key: "primary");
+            @include border-radius(3px);
+
+
+        }
+        &::-webkit-progress-bar{
+            background-color: darken($color: map-get($map: $colors, $key:"light" ), $amount: 10%) ;
+            @include border-radius(3px);
+        }
+        &::-webkit-progress-value{
+            background-color: map-get($map: $colors, $key: "primary");
+            @include border-radius(3px);
+        }
+    }
+}

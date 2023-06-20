@@ -1,0 +1,38 @@
+@import "Mixins.scss";
+
+
+@function CalculateGridColumnsWidth($totalColumns, $Index) {
+    $width: calc(100 / $totalColumns) * $Index;
+    @return #{$width}+'%';
+}
+
+@mixin AddGridsSystem($totalColumns) {
+    .row {
+        width:100%;
+        display: flex !important;
+        flex-wrap: wrap !important;
+        width: 100% !important;
+    }
+
+    $ColumnsClassName: "col-";
+
+    @for $index from 1 through $totalColumns {
+        .#{$ColumnsClassName}#{$index} {
+            width: CalculateGridColumnsWidth($totalColumns, $index) !important;
+        }
+    }
+
+    @for $index from 1 through $totalColumns {
+
+        @each $size,
+        $value in $grid-breakpoints {
+            .#{$ColumnsClassName}#{$size}-#{$index} {
+                @media screen and (max-width : $value) {
+                    width: CalculateGridColumnsWidth($totalColumns, $index) !important;
+                }
+            }
+        }
+    }
+}
+
+@include AddGridsSystem(12);

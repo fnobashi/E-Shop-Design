@@ -1,0 +1,241 @@
+@mixin flexbox($align-items: center, $justify-content: flex-start, $direction : row, $wrap:nowrap) {
+    display: flex;
+    align-items: $align-items;
+    justify-content: $justify-content;
+    flex-direction: $direction;
+    flex-wrap: $wrap;
+}
+
+@mixin position($position, $top:null, $bottom :null, $left: null, $right:null, $inset: null) {
+    position: $position;
+
+    @if ($top !=null) {
+        top: $top;
+    }
+
+    @if ($bottom !=null) {
+        bottom: $bottom;
+    }
+
+    @if ($left !=null) {
+        left: $left;
+    }
+
+    @if ($right !=null) {
+        right: $right;
+    }
+
+    @if ($inset !=null) {
+        inset: $inset;
+    }
+}
+
+@mixin filter($params...) {
+    -webkit-filter: $params;
+    filter: $params;
+}
+
+@mixin border-radius($params) {
+    -webkit-border-radius: $params;
+    -moz-border-radius: $params;
+    -ms-border-radius: $params;
+    -o-border-radius: $params;
+    border-radius: $params;
+}
+
+@mixin transform($params...) {
+    -webkit-transform: $params !important;
+    -moz-transform: $params !important;
+    -ms-transform: $params !important;
+    -o-transform: $params !important;
+    transform: $params !important;
+}
+
+@mixin transition($params...) {
+    -webkit-transition: $params !important;
+    -moz-transition: $params !important;
+    -ms-transition: $params !important;
+    -o-transition: $params !important;
+    transition: $params !important;
+}
+
+@mixin animation($params) {
+    -webkit-animation: $params;
+    animation: $params;
+}
+
+
+
+/// this needs to be changing since we are using defualt light color theme 
+/// it better be selected by the programmer wich theme it needs to be seted for colors 
+@mixin setLightThemeColor() {
+    $selector: &;
+
+    @if (#{$selector}=="body") {
+        @media (prefers-color-scheme :light) {
+            @at-root body.theme-auto {
+                @content;
+            }
+        }
+
+        @at-root body.theme-light {
+            @content;
+        }
+    }
+
+    @else {
+        @media (prefers-color-scheme : light) {
+            @at-root body.theme-auto #{$selector} {
+                @content;
+            }
+        }
+
+        @at-root body.theme-light #{$selector} {
+            @content;
+        }
+    }
+}
+
+@mixin setThemeStyles($theme){
+    @if($theme != "dark" and $theme != "light"){
+        @error "The Argument $theme is wrong it can only take one of 'light' or 'dark' values";
+    }
+
+    $selector : &;
+    @if($selector == "body"){
+            @at-root body.theme-#{$theme}{
+                @content;
+        }
+    }
+    @else{
+            @at-root body.theme-#{$theme} #{$selector}{
+                @content;
+            } 
+    }
+}
+
+
+
+
+
+$grid-breakpoints: (
+    "xs" : 400px , 
+    "sm" : 556px ,
+    "md" : 768px  , 
+    "lg" : 1200px , 
+    "xl" : 1400px 
+);
+
+@function GetBreakPoint($size) {
+    @return if(map-has-key($map: $grid-breakpoints, $key: $size), map-get($map: $grid-breakpoints, $key: $size), null);
+}
+
+
+@mixin media-breakpoint-down($size, $breakpoints: $grid-breakpoints) {
+    $size-in-pixel: GetBreakPoint($size);
+    @if($size-in-pixel != null){
+        @media screen and (max-width: $size-in-pixel) {
+            @content;
+        }
+    }@else{
+        @error "The Size You Choosed Doesn,t Exist In $grid-breakpoints Variable Inside _Mixin.scss";
+    }
+}
+
+@mixin media-breakpoint-up($size, $breakpoints: $grid-breakpoints) {
+    $size-in-pixel: GetBreakPoint($size);
+    @if($size-in-pixel != null){
+        @media screen and (min-width: $size-in-pixel) {
+            @content;
+        }
+    }@else{
+        @error "The Size You Choosed Doesn,t Exist In $grid-breakpoints Variable Inside _Mixin.scss";
+    }
+}
+
+
+@function LoopCalculation($Iteration, $ValueToCalculate, $val) {
+    @return $val+($Iteration * $ValueToCalculate);
+}
+
+
+@function get-first-letter($var) {
+    @return str-slice($var, 1, 1);
+}
+
+// Define mixin for margin and padding
+@mixin spacing($property, $upToLevel) {
+    @for $value from 1 through $upToLevel {
+        $class: $value;
+        $propertyValue : #{$value * .5}+"rem";
+
+        @if $value==0 {
+            $class: 'm-0';
+        }
+
+        @else {
+            $class: #{get-first-letter($property)}-#{$value};
+        }
+
+        .#{$class} {
+            #{$property}: $propertyValue !important;
+        }
+
+        // Generate classes for top, bottom, left, and right
+        @if $property=='margin' {
+            .#{get-first-letter($property)}t-#{$value} {
+                margin-top: $propertyValue !important;
+            }
+
+            .#{get-first-letter($property)}b-#{$value} {
+                margin-bottom: $propertyValue !important;
+            }
+
+            .#{get-first-letter($property)}l-#{$value} {
+                margin-left: $propertyValue !important;
+            }
+
+            .#{get-first-letter($property)}r-#{$value} {
+                margin-right: $propertyValue !important;
+            }
+
+            .#{get-first-letter($property)}x-#{$value} {
+                margin-right: $propertyValue !important;
+                margin-left: $propertyValue !important;
+            }
+
+            .#{get-first-letter($property)}y-#{$value} {
+                margin-top: $propertyValue !important;
+                margin-bottom: $propertyValue !important;
+            }
+        }
+
+        @else if $property=='padding' {
+            .#{get-first-letter($property)}t-#{$value} {
+                padding-top: $propertyValue !important;
+            }
+
+            .#{get-first-letter($property)}b-#{$value} {
+                padding-bottom: $propertyValue !important;
+            }
+
+            .#{get-first-letter($property)}l-#{$value} {
+                padding-left: $propertyValue !important;
+            }
+
+            .#{get-first-letter($property)}r-#{$value} {
+                padding-right: $propertyValue !important;
+            }
+
+            .#{get-first-letter($property)}x-#{$value} {
+                padding-right: $propertyValue !important;
+                padding-left: $propertyValue !important;
+            }
+
+            .#{get-first-letter($property)}y-#{$value} {
+                padding-top: $propertyValue !important;
+                padding-bottom: $propertyValue !important;
+            }
+        }
+    }
+}

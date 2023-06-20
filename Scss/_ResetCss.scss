@@ -1,0 +1,282 @@
+// Vazir Farsi Digits Without Latin
+
+@font-face{
+  font-family: VazirFarsiDigitsWithoutLatin;
+  src: url("../Fonts/Vazir/Farsi-Digits-Without-Latin/Vazir-Black-FD-WOL.eot") format("embeded-opentype") , 
+  url("../Fonts/Vazir/Farsi-Digits-Without-Latin/Vazir-Black-FD-WOL.ttf") format("truetype") , 
+  url("../Fonts/Vazir/Farsi-Digits-Without-Latin/Vazir-Black-FD-WOL.woff") format("woff") , 
+  url("../Fonts/Vazir/Farsi-Digits-Without-Latin/Vazir-Black-FD-WOL.woff2") format("woff2");
+  font-weight:900 ;
+}
+
+@font-face{
+  font-family: VazirFarsiDigitsWithoutLatin;
+  src: url("../Fonts/Vazir/Farsi-Digits-Without-Latin/Vazir-Bold-FD-WOL.eot") format("embeded-opentype") , 
+  url("../Fonts/Vazir/Farsi-Digits-Without-Latin/Vazir-Bold-FD-WOL.ttf") format("truetype") , 
+  url("../Fonts/Vazir/Farsi-Digits-Without-Latin/Vazir-Bold-FD-WOL.woff") format("woff") , 
+  url("../Fonts/Vazir/Farsi-Digits-Without-Latin/Vazir-Bold-FD-WOL.woff2") format("woff2");
+  font-weight:700 ;
+}
+
+@font-face{
+  font-family: VazirFarsiDigitsWithoutLatin;
+  src: url("../Fonts/Vazir/Farsi-Digits-Without-Latin/Vazir-FD-WOL.eot") format("embeded-opentype") , 
+  url("../Fonts/Vazir/Farsi-Digits-Without-Latin/Vazir-FD-WOL.ttf") format("truetype") , 
+  url("../Fonts/Vazir/Farsi-Digits-Without-Latin/Vazir-FD-WOL.woff") format("woff") , 
+  url("../Fonts/Vazir/Farsi-Digits-Without-Latin/Vazir-FD-WOL.woff2") format("woff2");
+  font-weight:500 ;
+}
+
+
+@font-face{
+  font-family: VazirFarsiDigitsWithoutLatin;
+  src: url("../Fonts/Vazir/Farsi-Digits-Without-Latin/Vazir-Light-FD-WOL.eot") format("embeded-opentype") , 
+  url("../Fonts/Vazir/Farsi-Digits-Without-Latin/Vazir-Light-FD-WOL.ttf") format("truetype") , 
+  url("../Fonts/Vazir/Farsi-Digits-Without-Latin/Vazir-Light-FD-WOL.woff") format("woff") , 
+  url("../Fonts/Vazir/Farsi-Digits-Without-Latin/Vazir-Light-FD-WOL.woff2") format("woff2");
+  font-weight:300 ;
+}
+
+
+@font-face{
+  font-family: VazirFarsiDigitsWithoutLatin;
+  src: url("../Fonts/Vazir/Farsi-Digits-Without-Latin/Vazir-Medium-FD-WOL.eot") format("embeded-opentype") , 
+  url("../Fonts/Vazir/Farsi-Digits-Without-Latin/Vazir-Medium-FD-WOL.ttf") format("truetype") , 
+  url("../Fonts/Vazir/Farsi-Digits-Without-Latin/Vazir-Medium-FD-WOL.woff") format("woff") , 
+  url("../Fonts/Vazir/Farsi-Digits-Without-Latin/Vazir-Medium-FD-WOL.woff2") format("woff2");
+  font-weight:400 ;
+}
+
+
+@font-face{
+  font-family: VazirFarsiDigitsWithoutLatin;
+  src: url("../Fonts/Vazir/Farsi-Digits-Without-Latin/Vazir-Thin-FD-WOL.eot") format("embeded-opentype") , 
+  url("../Fonts/Vazir/Farsi-Digits-Without-Latin/Vazir-Thin-FD-WOL.ttf") format("truetype") , 
+  url("../Fonts/Vazir/Farsi-Digits-Without-Latin/Vazir-Thin-FD-WOL.woff") format("woff") , 
+  url("../Fonts/Vazir/Farsi-Digits-Without-Latin/Vazir-Thin-FD-WOL.woff2") format("woff2");
+  font-weight:100 ;
+}
+
+
+// Vazir Farsi Digits
+
+@font-face{
+  font-family: VazirFarsiDigits;
+  src: url("../Fonts/Vazir/Farsi-Digits/Vazir-Black-FD.eot") format("embeded-opentype") , 
+  url("../Fonts/Vazir/Farsi-Digits/Vazir-Black-FD.ttf") format("truetype") , 
+  url("../Fonts/Vazir/Farsi-Digits/Vazir-Black-FD.woff") format("woff") , 
+  url("../Fonts/Vazir/Farsi-Digits/Vazir-Black-FD.woff2") format("woff2");
+  font-weight:900 ;
+}
+
+@font-face{
+  font-family: VazirFarsiDigits;
+  src: url("../Fonts/Vazir/Farsi-Digits/Vazir-Bold-FD.eot") format("embeded-opentype") , 
+  url("../Fonts/Vazir/Farsi-Digits/Vazir-Bold-FD.ttf") format("truetype") , 
+  url("../Fonts/Vazir/Farsi-Digits/Vazir-Bold-FD.woff") format("woff") , 
+  url("../Fonts/Vazir/Farsi-Digits/Vazir-Bold-FD.woff2") format("woff2");
+  font-weight:700 ;
+}
+
+@font-face{
+  font-family: VazirFarsiDigits;
+  src: url("../Fonts/Vazir/Farsi-Digits/Vazir-FD.eot") format("embeded-opentype") , 
+  url("../Fonts/Vazir/Farsi-Digits/Vazir-FD.ttf") format("truetype") , 
+  url("../Fonts/Vazir/Farsi-Digits/Vazir-FD.woff") format("woff") , 
+  url("../Fonts/Vazir/Farsi-Digits/Vazir-FD.woff2") format("woff2");
+  font-weight:500;
+}
+
+@font-face{
+  font-family: VazirFarsiDigits;
+  src: url("../Fonts/Vazir/Farsi-Digits/Vazir-Light-FD.eot") format("embeded-opentype") , 
+  url("../Fonts/Vazir/Farsi-Digits/Vazir-Light-FD.ttf") format("truetype") , 
+  url("../Fonts/Vazir/Farsi-Digits/Vazir-Light-FD.woff") format("woff") , 
+  url("../Fonts/Vazir/Farsi-Digits/Vazir-Light-FD.woff2") format("woff2");
+  font-weight:300;
+}
+
+@font-face{
+  font-family: VazirFarsiDigits;
+  src: url("../Fonts/Vazir/Farsi-Digits/Vazir-Medium-FD.eot") format("embeded-opentype") , 
+  url("../Fonts/Vazir/Farsi-Digits/Vazir-Medium-FD.ttf") format("truetype") , 
+  url("../Fonts/Vazir/Farsi-Digits/Vazir-Medium-FD.woff") format("woff") , 
+  url("../Fonts/Vazir/Farsi-Digits/Vazir-Medium-FD.woff2") format("woff2");
+  font-weight:400;
+}
+
+@font-face{
+  font-family: VazirFarsiDigits;
+  src: url("../Fonts/Vazir/Farsi-Digits/Vazir-Thin-FD.eot") format("embeded-opentype") , 
+  url("../Fonts/Vazir/Farsi-Digits/Vazir-Thin-FD.ttf") format("truetype") , 
+  url("../Fonts/Vazir/Farsi-Digits/Vazir-Thin-FD.woff") format("woff") , 
+  url("../Fonts/Vazir/Farsi-Digits/Vazir-Thin-FD.woff2") format("woff2");
+  font-weight:100 ;
+}
+
+//  Vazir Without Latin
+
+@font-face{
+  font-family: VazirWithoutLatin;
+  src: url("../Fonts/Vazir/Without-Latin/Vazir-Black-WOL.eot") format("embeded-opentype") , 
+  url("../Fonts/Vazir/Without-Latin/Vazir-Black-WOL.ttf") format("truetype") , 
+  url("../Fonts/Vazir/Without-Latin/Vazir-Black-WOL.woff") format("woff") , 
+  url("../Fonts/Vazir/Without-Latin/Vazir-Black-WOL.woff2") format("woff2");
+  font-weight:900 ;
+}
+
+@font-face{
+  font-family: VazirWithoutLatin;
+  src: url("../Fonts/Vazir/Without-Latin/Vazir-Bold-WOL.eot") format("embeded-opentype") , 
+  url("../Fonts/Vazir/Without-Latin/Vazir-Bold-WOL.ttf") format("truetype") , 
+  url("../Fonts/Vazir/Without-Latin/Vazir-Bold-WOL.woff") format("woff") , 
+  url("../Fonts/Vazir/Without-Latin/Vazir-Bold-WOL.woff2") format("woff2");
+  font-weight:700 ;
+}
+
+
+@font-face{
+  font-family: VazirWithoutLatin;
+  src: url("../Fonts/Vazir/Without-Latin/Vazir-Light-WOL.eot") format("embeded-opentype") , 
+  url("../Fonts/Vazir/Without-Latin/Vazir-Light-WOL.ttf") format("truetype") , 
+  url("../Fonts/Vazir/Without-Latin/Vazir-Light-WOL.woff") format("woff") , 
+  url("../Fonts/Vazir/Without-Latin/Vazir-Light-WOL.woff2") format("woff2");
+  font-weight:300 ;
+}
+
+
+
+@font-face{
+  font-family: VazirWithoutLatin;
+  src: url("../Fonts/Vazir/Without-Latin/Vazir-Medium-WOL.eot") format("embeded-opentype") , 
+  url("../Fonts/Vazir/Without-Latin/Vazir-Medium-WOL.ttf") format("truetype") , 
+  url("../Fonts/Vazir/Without-Latin/Vazir-Medium-WOL.woff") format("woff") , 
+  url("../Fonts/Vazir/Without-Latin/Vazir-Medium-WOL.woff2") format("woff2");
+  font-weight:500 ;
+}
+
+@font-face{
+  font-family: VazirWithoutLatin;
+  src: url("../Fonts/Vazir/Without-Latin/Vazir-Thin-WOL.eot") format("embeded-opentype") , 
+  url("../Fonts/Vazir/Without-Latin/Vazir-Thin-WOL.ttf") format("truetype") , 
+  url("../Fonts/Vazir/Without-Latin/Vazir-Thin-WOL.woff") format("woff") , 
+  url("../Fonts/Vazir/Without-Latin/Vazir-Thin-WOL.woff2") format("woff2");
+  font-weight:100 ;
+}
+
+@font-face{
+  font-family: VazirWithoutLatin;
+  src: url("../Fonts/Vazir/Without-Latin/Vazir-WOL.eot") format("embeded-opentype") , 
+  url("../Fonts/Vazir/Without-Latin/Vazir-WOL.ttf") format("truetype") , 
+  url("../Fonts/Vazir/Without-Latin/Vazir-WOL.woff") format("woff") , 
+  url("../Fonts/Vazir/Without-Latin/Vazir-WOL.woff2") format("woff2");
+  font-weight:400 ;
+}
+
+// Vazir
+
+@font-face{
+  font-family: Vazir;
+  src: url("../Fonts/Vazir/Root/Vazir-Black.eot") format("embeded-opentype") , 
+  url("../Fonts/Vazir/Root/Vazir-Black.ttf") format("truetype") , 
+  url("../Fonts/Vazir/Root/Vazir-Black.woff") format("woff") , 
+  url("../Fonts/Vazir/Root/Vazir-Black.woff2") format("woff2");
+  font-weight:900 ;
+}
+
+
+@font-face{
+  font-family: Vazir;
+  src: url("../Fonts/Vazir/Root/Vazir-Bold.eot") format("embeded-opentype") , 
+  url("../Fonts/Vazir/Root/Vazir-Bold.ttf") format("truetype") , 
+  url("../Fonts/Vazir/Root/Vazir-Bold.woff") format("woff") , 
+  url("../Fonts/Vazir/Root/Vazir-Bold.woff2") format("woff2");
+  font-weight:700 ;
+}
+
+
+
+@font-face{
+  font-family: Vazir;
+  src: url("../Fonts/Vazir/Root/Vazir-Light.eot") format("embeded-opentype") , 
+  url("../Fonts/Vazir/Root/Vazir-Light.ttf") format("truetype") , 
+  url("../Fonts/Vazir/Root/Vazir-Light.woff") format("woff") , 
+  url("../Fonts/Vazir/Root/Vazir-Light.woff2") format("woff2");
+  font-weight:300 ;
+}
+
+
+
+@font-face{
+  font-family: Vazir;
+  src: url("../Fonts/Vazir/Root/Vazir-Medium.eot") format("embeded-opentype") , 
+  url("../Fonts/Vazir/Root/Vazir-Medium.ttf") format("truetype") , 
+  url("../Fonts/Vazir/Root/Vazir-Medium.woff") format("woff") , 
+  url("../Fonts/Vazir/Root/Vazir-Medium.woff2") format("woff2");
+  font-weight:500 ;
+}
+
+
+
+@font-face{
+  font-family: Vazir;
+  src: url("../Fonts/Vazir/Root/Vazir-Thin.eot") format("embeded-opentype") , 
+  url("../Fonts/Vazir/Root/Vazir-Thin.ttf") format("truetype") , 
+  url("../Fonts/Vazir/Root/Vazir-Thin.woff") format("woff") , 
+  url("../Fonts/Vazir/Root/Vazir-Thin.woff2") format("woff2");
+  font-weight:100 ;
+}
+
+
+
+@font-face{
+  font-family: Vazir;
+  src: url("../Fonts/Vazir/Root/Vazir.eot") format("embeded-opentype") , 
+  url("../Fonts/Vazir/Root/Vazir.ttf") format("truetype") , 
+  url("../Fonts/Vazir/Root/Vazir.woff") format("woff") , 
+  url("../Fonts/Vazir/Root/Vazir.woff2") format("woff2");
+  font-weight:400 ;
+}
+
+// Yekan Font
+
+@font-face{
+  font-family:Yekan;
+  src: url("../Fonts/Yekan/Yekan.eot") format("embeded-opentype") , 
+  url("../Fonts/Yekan/Yekan.ttf") format("truetype") , 
+  url("../Fonts/Yekan/Yekan.woff") format("woff") , 
+  url("../Fonts/Yekan/Yekan.woff2") format("woff2");
+}
+
+html  , body {
+  direction: rtl;
+  font-family: Vazir , VazirWithoutLatin , Yekan;
+  font-size: 14px;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+
+h1 , h2 ,h3  , h4 , h5 , h6 , p  , strong {
+  &::selection{
+    background: transparent !important;
+  }
+}
+
+
+a{
+  text-decoration: none;
+}
+
+ul{
+  list-style: none;
+}
+
+body {
+  background-color: #f5f5f5;
+}

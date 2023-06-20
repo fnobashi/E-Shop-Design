@@ -1,0 +1,20 @@
+// import tools
+@import 'ResetCss.scss';
+@import 'Colors.scss';
+@import 'Mixins.scss';
+@import 'Components.scss';
+@import 'Grid.scss';
+@import 'Controls.scss';
+
+
+
+// import partials 
+@import 'Partials/Header.scss';
+@import 'Partials/SiteNavigation.scss';
+@import 'Partials/Footer.scss';
+@import 'Partials/breadcrumb.scss';
+
+
+// import pages
+@import 'Pages/HomePage.scss';
+@import 'Pages/Product.scss';

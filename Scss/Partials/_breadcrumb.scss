@@ -1,0 +1,25 @@
+.breadcrumb{
+    width: 100%;
+    display: flex;
+    ul , ol{
+        display: flex;
+        list-style: none !important;
+        .breadcrumb-item{
+            margin: 0 10px ;
+            position: relative;
+            &:last-of-type{
+                a::after{
+                    content: "";
+                }
+            }
+            a{
+                color :#000;
+                &::after{
+                    position: absolute;
+                    content: "/";
+                    padding-right: 5px;
+                }
+            }
+        }
+    }
+}

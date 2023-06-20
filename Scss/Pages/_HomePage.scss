@@ -1,0 +1,234 @@
+#home-page-content {
+    %owl-btn-styles {
+        position: absolute;
+        width: 50px;
+        height: 50px;
+        text-align: center;
+        font-size: 40px !important;
+        color: map-get($map: $colors, $key: "text");
+        top: 50%;
+        @include transform(translateY(-50%));
+        background-color: transparentize($color: #ffffff, $amount: 0.4);
+        border: 2px solid map-get($map: $colors, $key: "light");
+        @include border-radius(100px);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        &.disabled{
+            color: map-get($map: $colors, $key: "light");
+        }
+    }
+    .adplace-container {
+        padding-left: 20px;
+        width: 100%;
+        height: 488px;
+        .adplace {
+            width: 100%;
+            height: 100%;
+            a {
+                display: block;
+                width: 100%;
+                height: 100%;
+                @include transition(opacity 0.2s ease);
+                &:hover {
+                    opacity: 0.8;
+                }
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    @include border-radius(15px);
+                }
+            }
+        }
+    }
+
+    .product-slider-container {
+        width: 100%;
+        height: 500px;
+        .product-slider {
+            width: 100%;
+            height: 100%;
+            position: relative;
+            .owl-stage-outer {
+                @include border-radius(15px);
+            }
+            .owl-nav {
+                width: 100% !important;
+           
+                .owl-prev {
+                    right: 10px !important ;
+                    @extend %owl-btn-styles;
+                }
+                .owl-next {
+                    left: 10px !important;
+                    @extend %owl-btn-styles;
+                }
+            }
+            .owl-dots {
+                position: absolute;
+                width: 100%;
+                z-index: 1000;
+                bottom: 20px;
+                text-align: center;
+                display: flex;
+                justify-content: center;
+                .owl-dot {
+                    width: 13px;
+                    height: 13px;
+                    background-color: transparentize($color: #ffffff, $amount: 0.1);
+                    margin: 5px;
+                    @include transition(width 0.2s ease);
+                    @include border-radius(40px);
+                    &.active {
+                        width: 25px;
+                        background-color: map-get($map: $colors, $key: "primary");
+                    }
+                }
+            }
+        }
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    .adplace {
+        width: 100%;
+        .adplace-wrapper {
+            padding: 0 10px;
+            .adplace-link {
+                width: 100%;
+                display: block;
+                height: 200px;
+                overflow: hidden;
+                @include transition(opacity 0.2s ease);
+                &:hover {
+                    opacity: 0.8;
+                }
+                img {
+                    @include border-radius(15px);
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+        }
+    }
+
+    .product-slider {
+        margin-bottom: 20px;
+        position: relative;
+        .owl-nav{
+            width: 100%;
+        }
+        .owl-prev {
+            right: 10px !important ;
+            @extend %owl-btn-styles;
+        }
+        .owl-next {
+            left: 10px !important;
+            @extend %owl-btn-styles;
+        }
+        .product-slider-title-header {
+            width: 100%;
+            margin-bottom: 20px;
+            border-bottom: 2px solid darken($color: map-get($colors, "light"), $amount: 10%);
+            h2 {
+                display: inline;
+                font-size: 15px;
+                color: map-get($map: $colors, $key: "primary");
+                border-bottom: 2px solid map-get($map: $colors, $key: "primary");
+            }
+        }
+        .product-item-wrapper {
+            padding: 0 5px;
+        }
+        .product-item {
+            position: relative;
+            display: block;
+            width: 100%;
+            height: 400px;
+            background-color: map-get($map: $colors, $key: "White");
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            font-family: "VazirFarsiDigits";
+            @include border-radius(15px);
+            &:hover{
+                &::before{
+                    visibility: visible;
+                    opacity: 1;
+                }
+                .actions{
+                    opacity: 1;
+                    .show-icon{
+                        @include transform(scale(1));
+                    }
+                }
+            }
+            &::before{
+                content: "";
+                position: absolute;
+                inset: 0;
+                width: 100%;
+                height: 100%;
+                visibility: hidden;
+                opacity: 0;
+                background-color: transparentize($color: map-get($colors , "White" ), $amount: .3);
+                @include transition(opacity .2s ease-in-out);
+                @include border-radius(15px);
+            }
+            .item-img {
+                width: 90%;
+                height: 70%;
+                img {
+                    width: 100%;
+                    height: 100%;
+                    padding: 10px 0;
+                    object-fit: cover;
+                }
+            }
+
+            .item-title {
+                width: 90%;
+                font-size: 13px;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                text-align: center;
+            }
+            .item-price {
+                text-align: center;
+            }
+
+            .actions {
+                position: absolute;
+                top: 40%;
+                pointer-events: none;
+                right: 50%;
+                opacity: 0;
+                @include transform(translate(50%  , -50%));
+                @include transition(opacity .2s ease-in-out);
+                .show-icon {
+                    font-size: 40px;
+                    color: map-get($map: $colors, $key: "black");
+                    width: 60px;
+                    height: 60px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    border:2px solid #000;
+                    @include border-radius(60px);
+                    @include transform(scale(.4));
+                    @include transition(transform .2s ease-in-out);
+                    i::before{
+                        margin-top: 13px !important;
+                    }
+                }
+            } 
+        }
+    }
+}

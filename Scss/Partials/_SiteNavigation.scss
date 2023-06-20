@@ -1,0 +1,288 @@
+#site-navigation {
+    padding: 0 15px;
+    position: relative;
+    * {
+        overflow: visible !important;
+    }
+    .navigation-overlay{
+        display: none;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        left: 0;
+        width: 100%;
+        height: 80vh;
+        z-index: -1;
+        background-color: map-get($map: $colors, $key:"text" );
+        opacity: .6;
+        &.active{
+            display: block;
+        }
+    }
+
+    .sub-navigation {
+        margin-left: 18px !important;
+        z-index:999999 !important;  
+        a.sub-navigation-link {
+            padding: 22px 0;
+            &.active{
+                color: map-get($map: $colors, $key: "primary");
+                &::after{
+                    @include transform(rotateZ(-135deg));
+                    color :map-get($map: $colors, $key: "primary");
+                }
+                &::before{
+                    width: 100%;
+                }
+            }
+            &::before{
+                bottom: 3px;
+            }
+            cursor: pointer;
+            &:hover::after {
+                @include transform(rotateZ(-135deg));
+                color: map-get($map: $colors, $key: "primary");
+            }
+            position: relative;
+            &::after {
+                content: "";
+                display: block;
+                border-bottom: 1px solid map-get($map: $colors, $key: "text");
+                border-right: 1px solid map-get($map: $colors, $key: "text");
+                height: 6px;
+                width: 6px;
+                position: absolute;
+                left: -13px;
+                top: 50%;
+                @include transform(translateY(-50%) rotate(45deg));
+                transform-origin: center center;
+                @include transition(transform 0.2s ease, color 0.2s ease);
+            }
+        }
+
+        .sub-navigation-menu {
+            width: 97%;
+            margin: 20px;
+            padding: 20px;
+            position: absolute;
+            top: 41px;
+            background-color: #fff;
+            @include border-radius(20px);
+            right: 0;   
+            display: none;
+            &.active{
+                display: flex;
+            }
+            .sub-menu-items {
+                width: 80%;
+                display: flex;
+                flex-wrap: wrap;
+                align-items: flex-start;
+                justify-content: space-around;
+                .sub-menu-category {
+                    width: 25%;
+                    .category-header {
+                        color: map-get($map: $colors, $key: "text");
+                        font-size: 16px;
+                        font-weight: 700;
+                        &:hover {
+                            color: map-get($map: $colors, $key: "primary");
+                            border-bottom: 1px dashed map-get($map: $colors, $key: "primary");
+                        }
+                    }
+                    .category-list-items {
+                        padding-right: 20px;
+                        li {
+                            line-height: 40px;
+                        }
+                        a {
+                            color: map-get($map: $colors, $key: "text");
+                            cursor: pointer;
+                            opacity: 0.8;
+                            @include transition(all .3s ease-in-out);
+                            &:hover{
+                                color: map-get($map: $colors, $key: "primary");
+                                font-weight: 700;
+                                padding-right: 10px;
+                            }
+                        }
+                    }
+                }
+            }
+            .sub-menu-image {
+                width: 250px;
+                height: 250px;
+                position: absolute;
+                bottom: 20px;
+                left: 20px;
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+        }
+    }
+
+    .navigation-link {
+        margin: 0 10px;
+        line-height: 60px;
+        > a {
+            padding: 1rem 0;
+            position: relative;
+            cursor: pointer;
+            @include transition(color, width 0.2s ease);
+            &:hover {
+                color: map-get($map: $colors, $key: "primary");
+            }
+            &:hover::before {
+                width: 100%;
+            }
+            &::before {
+                content: "";
+                position: absolute;
+                height: 2px;
+                width: 0;
+                background-color: map-get($map: $colors, $key: "primary");
+                bottom: -5px;
+                right: 50%;
+                transform-origin: center;
+                @include transition(width 0.3s ease-in-out);
+                @include transform(translateX(50%));
+            }
+        }
+    }
+
+    .cart-basket{
+        position: relative;
+        &:hover{
+            .widget-shopping-cart{
+                opacity: 1;
+                visibility: visible;
+            }
+        }
+    }
+    .widget-shopping-cart{
+        opacity: 0;
+        visibility: hidden;
+        position: absolute;
+        top:50px;
+        max-width: 300px;
+        left: 0;
+        z-index: 1000;
+        @include transition(opacity .2s ease);
+        background-color: #fff;
+        @include border-radius(20px);
+        overflow: hidden;
+        .cart-items{
+            width: 100%;
+            ul{
+                width: 100%;
+                height: 200px;
+                overflow-y:scroll !important;
+                li.cart-item{
+                    position: relative;
+                    width: 100%;
+                    padding-right: 70px;
+                    padding-top: 10px;
+                    padding-bottom: 10px;
+                    border-bottom: 1px solid map-get($map: $colors, $key: "light");
+                    &:hover{
+                        cursor: default;
+                        .delete-product{
+                            opacity: 1 !important;
+                        }
+                    }
+                    .item-picture{
+                        width: 50px;
+                        height: 50px;
+                        position: absolute;
+                        right: 5px;
+                        top: 10px;
+                        .delete-product{
+                            position: absolute;
+                            inset: 0;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            width: 100%;
+                            height: 50px;
+                            opacity: 0;
+                            background-color: map-get($map: $colors, $key: "light");
+                            font-size: 30px !important;
+                            @include border-radius(10px);
+                            @include transition(opacity .2s ease);
+                        }
+                        img{
+                            width: 100%;
+                            height: 100%;
+                            object-fit: cover;
+                            @include border-radius(10px);
+                        }
+                    }
+                    .item-title{
+                        max-width: 200px;
+                        color:#000;
+                    }
+                    .item-price{
+                        color: map-get($map: $colors, $key: "text");
+                        font-size: 11px;
+                    }
+                }
+            }
+        }
+        .cart-total{
+            padding: 10px 20px;
+            background-color: transparentize(map-get($map: $colors, $key: "gray") , .8);
+        }
+        .cart-button{
+            padding: 20px;
+            a:last-of-type{
+                @include border-radius(30px);
+            }
+        }
+    }
+
+    .cart-basket-box {
+    
+        .cart-basket {
+            width: 180px;
+            position: relative;
+            background-color: map-get($map: $colors, $key: "primary");
+            color: #fff;
+            line-height: 25px;
+            @include border-radius(100px);
+            .cart-icon {
+                font-size: 22px;
+                float: right;
+                line-height: 40px;
+                margin: 5px 10px;
+            }
+            .cart-count {
+                position: absolute;
+                font-family: "VazirFarsiDigits";
+                width: 20px;
+                height: 20px;
+                top: 15px;
+                left: 15px;
+                font-size: 11px;
+                color: map-get($map: $colors, $key: "primary");
+                line-height: 20px;
+                text-align: center;
+                @include border-radius(100%);
+                background-color: map-get($map: $colors, $key: "White");
+            }
+            .cart-price {
+                display: block;
+                font-weight: 100;
+                font-size: 11px;
+                font-family: "VazirFarsiDigits";
+            }
+            .cart-title {
+                font-weight: 700;
+                display: block;
+                line-height: 25px;
+            }
+        }
+    }
+}
