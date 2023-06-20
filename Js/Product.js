@@ -1,36 +1,28 @@
 $(document).ready(function () {
-
-    $(".product-image").click(function (e) { 
-        e.preventDefault();
-        let imageSrc = $(this).find("img").attr("src");
-        $('.big-picture img').attr("src" , imageSrc);
-    });
-
-
     // slide show for images of products in product page 
     $(".product-images").owlCarousel({
         rtl: true,
         items: 4,
         loop: false,
         margin: 0,
-        nav:false  ,
+        nav: false,
         dots: false,
         autoplay: false,
     });
 
 
     // for toggling between in show more an less in content
-    $(".btn-show-content").click(function (e) { 
+    $(".btn-show-content").click(function (e) {
         e.preventDefault();
         $(".review-content").toggleClass("show");
         $(".shadow-box").toggle();
         let showcontent = $(".review-content").hasClass("show");
         console.log(showcontent);
-        if(showcontent){
+        if (showcontent) {
             $(".content-more").hide();
             $(".content-less").show();
         }
-        else{
+        else {
             $(".content-less").hide();
             $(".content-more").show();
         }
@@ -72,7 +64,7 @@ $(document).ready(function () {
 
     });
 
-    $(".tab-item a").click(function (e) { 
+    $(".tab-item a").click(function (e) {
         e.preventDefault();
         $(".tab-nav .tab-item a").removeClass("active");
         $(this).addClass("active");
@@ -80,11 +72,11 @@ $(document).ready(function () {
         $(".tab-content .content").each(function (index, element) {
             $(this).removeClass("show");
             let contentId = $(this).attr('id');
-            if(id === contentId){
+            if (id === contentId) {
                 $(this).addClass("show");
             }
         });
-    });    
+    });
 
     $("#ImageZoom").ezPlus({
         zoomType: 'inner',
@@ -94,5 +86,22 @@ $(document).ready(function () {
         zoomWindowFadeIn: 300 ,
         zoomWindowFadeOut: 300 , 
     });
+
+    $(".product-image").click(function(e) {
+        e.preventDefault();
+        let imageSrc = $(this).find("img").attr("src");
+        $('.big-picture img').attr("src", imageSrc);
+        $("#ImageZoom").ezPlus('destroy'); // Remove existing plugin instance
+        setTimeout(function() {
+          $("#ImageZoom").ezPlus({ // Re-initialize the plugin with new settings
+            zoomType: 'inner',
+            cursor: 'default',
+            borderSize: 2,
+            borderColour: "#eeeeee",
+            zoomWindowFadeIn: 300,
+            zoomWindowFadeOut: 300,
+          });
+        }, 100); // Delay initialization to ensure the image source has been updated
+      });
 
 });
