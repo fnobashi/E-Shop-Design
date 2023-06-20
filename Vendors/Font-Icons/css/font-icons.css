@@ -1,11 +1,11 @@
 @font-face {
   font-family: 'font-icons';
-  src: url('../../../Fonts/font-icons/font-icons.eot?9347457');
-  src: url('../../../Fonts/font-icons/font-icons.eot?9347457#iefix') format('embedded-opentype'),
-       url('../../../Fonts/font-icons/font-icons.woff2?9347457') format('woff2'),
-       url('../../../Fonts/font-icons/font-icons.woff?9347457') format('woff'),
-       url('../../../Fonts/font-icons/font-icons.ttf?9347457') format('truetype'),
-       url('../../../Fonts/font-icons/font-icons.svg?9347457#font-icons') format('svg');
+  src: url('../../../Fonts/font-icons/font-icons.eot?70603168');
+  src: url('../../../Fonts/font-icons/font-icons.eot?70603168#iefix') format('embedded-opentype'),
+       url('../../../Fonts/font-icons/font-icons.woff2?70603168') format('woff2'),
+       url('../../../Fonts/font-icons/font-icons.woff?70603168') format('woff'),
+       url('../../../Fonts/font-icons/font-icons.ttf?70603168') format('truetype'),
+       url('../../../Fonts/font-icons/font-icons.svg?70603168#font-icons') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -15,7 +15,7 @@
 @media screen and (-webkit-min-device-pixel-ratio:0) {
   @font-face {
     font-family: 'font-icons';
-    src: url('../font/font-icons.svg?9347457#font-icons') format('svg');
+    src: url('../font/font-icons.svg?70603168#font-icons') format('svg');
   }
 }
 */
@@ -59,6 +59,7 @@
 .site-icon-glasses:before { content: '\e802'; } /* '' */
 .site-icon-chat:before { content: '\e803'; } /* '' */
 .site-icon-question:before { content: '\e804'; } /* '' */
+.site-icon-question2:before { content: '\e805'; } /* '' */
 .site-icon-sun-2:before { content: '\e806'; } /* '' */
 .site-icon-sun-filled:before { content: '\e807'; } /* '' */
 .site-icon-cloud-sun:before { content: '\e808'; } /* '' */

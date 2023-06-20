@@ -343,6 +343,35 @@ body.theme-dark .btn-dark-theme-primary {
   background-color: #999999 !important;
 }
 
+.color-lightblue {
+  color: #24c0df !important;
+}
+
+.bg-color-lightblue {
+  background-color: #24c0df !important;
+}
+
+.border-color-lightblue {
+  border-color: #24c0df !important;
+}
+
+.hover-color-lightblue {
+  transition: color 0.2s ease-in-out !important;
+}
+.hover-color-lightblue:hover {
+  color: #24c0df !important;
+}
+
+.btn-lightblue {
+  background-color: #eeeeee !important;
+  transition: background-color 0.3s ease-in !important;
+}
+.btn-lightblue:hover {
+  color: #eeeeee !important;
+  color: #eeeeee !important;
+  background-color: #24c0df !important;
+}
+
 .color-dark-gray {
   color: #474747 !important;
 }
@@ -2823,6 +2852,54 @@ textarea.form-control {
   line-height: 22px;
   border-radius: 50%;
   background-color: #d5d5d5;
+}
+#product-page .tabs #Question-and-answer-tab .faq-content {
+  width: 100%;
+  margin-top: 30px;
+}
+#product-page .tabs #Question-and-answer-tab .faq-content .question-list {
+  width: 100%;
+}
+#product-page .tabs #Question-and-answer-tab .faq-content .question-list .question-list-item {
+  margin: 25px 0;
+  width: 100%;
+  border-radius: 15px;
+  background-color: #f6f6f6;
+}
+#product-page .tabs #Question-and-answer-tab .faq-content .question-list .question-list-item .q-header {
+  position: relative;
+  padding: 0 20px 10px 20px;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #d5d5d5;
+}
+#product-page .tabs #Question-and-answer-tab .faq-content .question-list .question-list-item .q-header .q-icon {
+  position: absolute;
+  top: -3rem;
+  right: -3rem;
+  background: linear-gradient(135deg, #fdf1a4 10%, #e0c300 100%);
+  width: 50px;
+  height: 50px;
+  font-size: 1.8rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+}
+#product-page .tabs #Question-and-answer-tab .faq-content .question-list .question-list-item .q-content .q-text {
+  max-width: 80%;
+  display: inline-block;
+}
+#product-page .tabs #Question-and-answer-tab .faq-content .question-list .question-list-item .q-content .q-date {
+  color: #bbbbbb;
+}
+#product-page .tabs #Question-and-answer-tab .faq-content .question-list .question-list-item .q-footer {
+  display: block;
+  box-sizing: border-box;
+  padding: 20px;
+}
+#product-page .tabs #Question-and-answer-tab .faq-content .question-list .question-list-item.answer-question {
+  margin-right: 10%;
+  max-width: 90%;
 }
 #product-page .tabs .tab-box {
   width: 100%;
