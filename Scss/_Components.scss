@@ -31,6 +31,16 @@ end;
     }
 }
 
+$flex-direction: column  , 
+row , 
+row-reverse , 
+column-reverse;
+@each $value in $flex-direction{
+    .flex-direction-#{$value}{
+        flex-direction: $value;
+    }
+}
+
 $justifyContent: center,
 flex-end,
 end,
