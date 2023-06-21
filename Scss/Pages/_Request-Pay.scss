@@ -1,0 +1,8 @@
+#request-pay-page{
+    .payment-checkout{
+        @include border-radius(15px);
+        .payment-method{
+            @include border-radius(15px);
+        }
+    }   
+}

@@ -189,13 +189,12 @@ body.theme-dark .btn-dark-theme-primary {
 }
 
 .btn-White {
-  background-color: #eeeeee !important;
+  background-color: #ffffff !important;
   transition: background-color 0.3s ease-in !important;
 }
 .btn-White:hover {
   color: #eeeeee !important;
-  color: #eeeeee !important;
-  background-color: #ffffff !important;
+  background-color: #e0e0e0 !important;
 }
 
 .color-light {
@@ -223,8 +222,7 @@ body.theme-dark .btn-dark-theme-primary {
 }
 .btn-light:hover {
   color: #eeeeee !important;
-  color: #eeeeee !important;
-  background-color: #eeeeee !important;
+  background-color: #cfcfcf !important;
 }
 
 .color-black {
@@ -247,13 +245,12 @@ body.theme-dark .btn-dark-theme-primary {
 }
 
 .btn-black {
-  background-color: #eeeeee !important;
+  background-color: #000000 !important;
   transition: background-color 0.3s ease-in !important;
 }
 .btn-black:hover {
   color: #eeeeee !important;
-  color: #eeeeee !important;
-  background-color: #000000 !important;
+  background-color: black !important;
 }
 
 .color-primary {
@@ -276,13 +273,12 @@ body.theme-dark .btn-dark-theme-primary {
 }
 
 .btn-primary {
-  background-color: #eeeeee !important;
+  background-color: #651fff !important;
   transition: background-color 0.3s ease-in !important;
 }
 .btn-primary:hover {
   color: #eeeeee !important;
-  color: #eeeeee !important;
-  background-color: #651fff !important;
+  background-color: #4600e1 !important;
 }
 
 .color-text {
@@ -305,13 +301,12 @@ body.theme-dark .btn-dark-theme-primary {
 }
 
 .btn-text {
-  background-color: #eeeeee !important;
+  background-color: #616161 !important;
   transition: background-color 0.3s ease-in !important;
 }
 .btn-text:hover {
   color: #eeeeee !important;
-  color: #eeeeee !important;
-  background-color: #616161 !important;
+  background-color: #424242 !important;
 }
 
 .color-gray {
@@ -334,13 +329,12 @@ body.theme-dark .btn-dark-theme-primary {
 }
 
 .btn-gray {
-  background-color: #eeeeee !important;
+  background-color: #999999 !important;
   transition: background-color 0.3s ease-in !important;
 }
 .btn-gray:hover {
   color: #eeeeee !important;
-  color: #eeeeee !important;
-  background-color: #999999 !important;
+  background-color: #7a7a7a !important;
 }
 
 .color-lightblue {
@@ -363,13 +357,12 @@ body.theme-dark .btn-dark-theme-primary {
 }
 
 .btn-lightblue {
-  background-color: #eeeeee !important;
+  background-color: #24c0df !important;
   transition: background-color 0.3s ease-in !important;
 }
 .btn-lightblue:hover {
   color: #eeeeee !important;
-  color: #eeeeee !important;
-  background-color: #24c0df !important;
+  background-color: #1994ad !important;
 }
 
 .color-dark-gray {
@@ -392,13 +385,12 @@ body.theme-dark .btn-dark-theme-primary {
 }
 
 .btn-dark-gray {
-  background-color: #eeeeee !important;
+  background-color: #474747 !important;
   transition: background-color 0.3s ease-in !important;
 }
 .btn-dark-gray:hover {
   color: #eeeeee !important;
-  color: #eeeeee !important;
-  background-color: #474747 !important;
+  background-color: #282828 !important;
 }
 
 .color-red {
@@ -421,13 +413,12 @@ body.theme-dark .btn-dark-theme-primary {
 }
 
 .btn-red {
-  background-color: #eeeeee !important;
+  background-color: #ef4343 !important;
   transition: background-color 0.3s ease-in !important;
 }
 .btn-red:hover {
   color: #eeeeee !important;
-  color: #eeeeee !important;
-  background-color: #ef4343 !important;
+  background-color: #e21313 !important;
 }
 
 .container {
@@ -1784,19 +1775,54 @@ body.theme-dark .btn-dark-theme-primary {
   }
 }
 
-input.form-control, textarea.form-control {
+select.form-control, input.form-control, textarea.form-control {
   width: 100%;
   display: block;
   background-color: #eeeeee;
   border: 1px solid #d5d5d5;
   border-radius: 15px;
   outline: none !important;
+  font-family: "VazirFarsiDigits", "Vazir" !important;
+  font-size: 1rem;
+  color: #474747;
+  font-weight: 300;
   padding: 10px;
+  transition: border-color 0.3s ease !important;
+}
+select.form-control:focus, input.form-control:focus, textarea.form-control:focus {
+  border-color: #24c0df;
 }
 
 textarea.form-control {
   border-radius: 15px 15px 15px 0;
   resize: vertical !important;
+}
+
+input.form-control::-webkit-outer-spin-button,
+input.form-control::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number].form-control {
+  -moz-appearance: textfield;
+}
+
+input[type=radio].form-control {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  width: 5px;
+  height: 5px;
+  display: inline-block;
+  padding: 5px;
+  background-color: #ffffff;
+  border: 3px solid #fff;
+  border-color: #fff !important;
+  outline: 1px solid #651fff !important;
+}
+input[type=radio].form-control:checked {
+  background-color: #651fff;
 }
 
 .btn {
@@ -1807,6 +1833,7 @@ textarea.form-control {
   border-radius: 100px;
   border: none;
   outline: none;
+  cursor: pointer;
 }
 
 #site-header {
@@ -2997,4 +3024,11 @@ textarea.form-control {
 }
 #login-signup-page #login-signup .nav-links .link.active a {
   color: #24c0df;
+}
+
+#request-pay-page .payment-checkout {
+  border-radius: 15px;
+}
+#request-pay-page .payment-checkout .payment-method {
+  border-radius: 15px;
 }
