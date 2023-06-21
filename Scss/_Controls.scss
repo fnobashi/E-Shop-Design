@@ -5,7 +5,15 @@
     border:1px solid darken($color: map-get($colors , "light") , $amount: 10%);
     @include border-radius(15px);
     outline:none !important;
+    font-family: "VazirFarsiDigits"  , "Vazir" !important;
+    font-size: 1rem;
+    color:map-get($map: $colors, $key: "dark-gray");
+    font-weight: 300;
     padding: 10px;
+    @include transition(border-color .3s ease);
+    &:focus{
+        border-color: map-get($map: $colors, $key: "lightblue");
+    }
 }
 textarea.form-control{
     @extend %form-control;  
@@ -18,6 +26,35 @@ input.form-control{
 }
 
 
+input.form-control::-webkit-outer-spin-button,
+input.form-control::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number].form-control {
+  -moz-appearance: textfield;
+}
+
+select.form-control{
+    @extend %form-control;
+}
+
+input[type='radio'].form-control{
+    appearance: none;
+    width: 5px;
+    height: 5px;
+    display: inline-block;
+    padding: 5px;
+    background-color: map-get($map: $colors, $key: "White");
+    border: 3px solid #fff;
+    border-color: #fff !important;
+    outline: 1px solid map-get($map: $colors, $key: "primary") !important;
+    &:checked{
+        background-color: map-get($map: $colors, $key: "primary") ;
+    }
+}
+
 .btn{
     padding: 10px 20px;
     font-family: "VazirWithoutLatin" , Vazir , Yekan;
@@ -26,4 +63,5 @@ input.form-control{
     @include border-radius(100px);
     border: none;
     outline: none;
+    cursor: pointer;
 }
