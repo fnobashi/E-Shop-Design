@@ -1,5 +1,5 @@
 $(document).ready(function () {
-    $('select').niceSelect();
+    $('.nice-select').niceSelect();
 
     $('.sub-navigation').hover(function () {
         $('.navigation-overlay').addClass('active');
