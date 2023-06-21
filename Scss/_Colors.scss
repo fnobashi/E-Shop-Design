@@ -61,13 +61,12 @@ $color in $colors {
         }
     }
     .btn-#{$colorName} {
-        background-color: map-get($map: $colors, $key:"light" ) !important;
+        background-color: $color !important;
         @include transition(background-color .3s ease-in);
         &:hover{
             color: map-get($map: $colors, $key:"light") !important;
-            color: map-get($map: $colors, $key:"light") !important;
 
-            background-color: $color !important;
+            background-color: darken($color: $color, $amount: 12%) !important;
         }
     }
 }
