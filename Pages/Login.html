@@ -5,15 +5,14 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../Vendors/Font-Icons/css/font-icons.css">
     <link rel="stylesheet" href="../Css/Main.css">
-    <title>ثبت نام کاربر جدید</title>
+    <title>صفحه ورود به سایت</title>
 </head>
 
 
 <body>
     <main>
-        <div id="login-signup-page" class="w-100">
+        <div id="login-signup-page" class="w-100 d-flex align-items-center justify-content-center">
             <div class="d-flex align-items-center justify-content-center flex-direction-column">
                 <div class="logo">
                     <img src="../Images/Site-logo/logo.png" alt="Logo">
@@ -21,42 +20,44 @@
                 <div id="login-signup">
                     <header class="header-nav w-100">
                         <nav class="d-flex w-100 nav-links">
-                            <a href="" class="d-block tab-link">ورود
-                                <span>ورود به سایت</span>
-                            </a>
-                            <a href="" class="d-block">ثبت نام
-                                <span>ثبت نام در سایت</span>
-                            </a>
+                            <div class="row">
+                                <div class="col-6 link active">
+                                    <a href="" class="d-block text-center">ورود
+                                        <span class="d-block">ورود به سایت</span>
+                                    </a>
+                                </div>
+                                <div class="col-6 link">
+                                    <a href="" class=" d-block text-center">ثبت نام
+                                        <span class="d-block">ثبت نام در سایت</span>
+                                    </a>
+                                </div>
+                            </div>
                         </nav>
                         <div class="content">
                     </header>
-                        <p class="text-center">ثبت نام در سایت</p>
+                    <div class="p-4">
+                        <p class="text-center color-text">ورود به سایت</p>
                         <form class="login-signup-form">
-                            <div class="">
-                                <label for="email">ایمیل / شماره همراه</label>
+                            <div class="form-input my-2">
+                                <label for="email" class="color-text">ایمیل / شماره همراه</label>
                                 <input id="email" type="text" class="form-control">
                             </div>
-                            <div class="">
-                                <label for="password">کلمه عبور</label>
+                            <div class="form-input my-2">
+                                <label for="password" class="color-text">کلمه عبور</label>
                                 <input id="password" type="text" class="form-control">
                             </div>
-                            <div class="">
-                                <label for="repass">تکرار کلمه عبور</label>
-                                <input id="repass" type="text" class="form-control">
-                            </div>
-                            
-                            <div class="submit">
-                                <input type="submit" class="btn btn-primary w-100 p-1" value="ثبت نام">
+
+                            <div class="my-4 submit">
+                                <input type="submit" class="btn w-100 p-1" value="ورود">
                             </div>
                         </form>
                     </div>
-                    
                 </div>
+
             </div>
         </div>
+        </div>
     </main>
-
-    <script src="../Vendors/Jquery/jquery.min.js"></script>
 
 </body>
 

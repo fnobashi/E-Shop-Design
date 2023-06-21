@@ -2942,6 +2942,59 @@ textarea.form-control {
   color: #651fff;
 }
 
-#login-signup {
+#login-signup-page {
   height: 100vh;
+}
+#login-signup-page #login-signup {
+  width: 450px;
+  background-color: #ffffff;
+  border-radius: 15px;
+}
+#login-signup-page #login-signup .header-nav {
+  width: 100%;
+  width: 100%;
+}
+#login-signup-page #login-signup .submit button, #login-signup-page #login-signup .submit input[type=submit] {
+  color: #eeeeee;
+  background-color: #24c0df;
+  transition: background-color 0.3s ease-in-out !important;
+}
+#login-signup-page #login-signup .submit button:hover, #login-signup-page #login-signup .submit input[type=submit]:hover {
+  background-color: #50cde6;
+}
+#login-signup-page #login-signup .nav-links {
+  width: 100%;
+  height: 100%;
+}
+#login-signup-page #login-signup .nav-links .link {
+  width: 100%;
+  height: 100%;
+  background-color: #eeeeee;
+}
+#login-signup-page #login-signup .nav-links .link a {
+  width: 100%;
+  height: 100%;
+  padding: 15px;
+  font-weight: 700;
+  color: #616161;
+}
+#login-signup-page #login-signup .nav-links .link a span {
+  font-size: 12px;
+  font-weight: 300;
+}
+#login-signup-page #login-signup .nav-links .link .link:focus, #login-signup-page #login-signup .nav-links .link .link:active {
+  border: none;
+  outline: none;
+}
+#login-signup-page #login-signup .nav-links .link:first-of-type {
+  border-radius: 0 15px 0 0;
+}
+#login-signup-page #login-signup .nav-links .link:last-of-type {
+  border-radius: 15px 0 0 0;
+}
+#login-signup-page #login-signup .nav-links .link.active {
+  background-color: #ffffff;
+}
+#login-signup-page #login-signup .nav-links .link.active a {
+  color: #24c0df;
 }
