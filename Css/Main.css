@@ -421,6 +421,34 @@ body.theme-dark .btn-dark-theme-primary {
   background-color: #e21313 !important;
 }
 
+.color-green {
+  color: #28a745 !important;
+}
+
+.bg-color-green {
+  background-color: #28a745 !important;
+}
+
+.border-color-green {
+  border-color: #28a745 !important;
+}
+
+.hover-color-green {
+  transition: color 0.2s ease-in-out !important;
+}
+.hover-color-green:hover {
+  color: #28a745 !important;
+}
+
+.btn-green {
+  background-color: #28a745 !important;
+  transition: background-color 0.3s ease-in !important;
+}
+.btn-green:hover {
+  color: #eeeeee !important;
+  background-color: #1c7631 !important;
+}
+
 .container {
   margin: 0 auto;
   width: 1300px;
@@ -3031,4 +3059,20 @@ input[type=radio].form-control:checked {
 }
 #request-pay-page .payment-checkout .payment-method {
   border-radius: 15px;
+}
+
+#Payment-Result .result {
+  border-radius: 15px;
+}
+#Payment-Result .order-overview {
+  border-radius: 15px;
+}
+#Payment-Result .order-overview li {
+  color: #616161;
+  font-weight: 300;
+}
+#Payment-Result .order-overview li span {
+  color: #616161;
+  font-size: 16px;
+  font-weight: 700;
 }

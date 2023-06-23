@@ -1,0 +1,20 @@
+#Payment-Result {
+    .result {
+        @include border-radius(15px);
+    }
+
+    .order-overview {
+        @include border-radius(15px);
+
+        li {
+            color: map-get($map: $colors, $key: "text");
+            font-weight: 300;
+
+            span {
+                color: map-get($map: $colors, $key: "text");
+                font-size: 16px;
+                font-weight: 700;
+            }
+        }
+    }
+}
