@@ -65,3 +65,14 @@ input[type='radio'].form-control{
     outline: none;
     cursor: pointer;
 }
+
+.form-group{
+    margin: 20px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: flex-start;
+    *{
+        margin: 3px 0;
+    }
+}
