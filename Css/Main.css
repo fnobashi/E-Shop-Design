@@ -1388,6 +1388,60 @@ body.theme-dark .btn-dark-theme-primary {
   border-radius: 3px;
 }
 
+.quantity {
+  width: 90px;
+  position: relative;
+}
+.quantity input[type=number] {
+  z-index: 0;
+  width: 90px;
+  outline: none;
+  color: #616161;
+  border-radius: 15px;
+  padding: 5px 0;
+  padding-right: 40px;
+  border: 1px solid gainsboro;
+  -moz-appearance: textfield;
+}
+.quantity input[type=number]::-webkit-outer-spin-button, .quantity input[type=number]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.quantity .quantity-button {
+  display: flex;
+  position: absolute;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  font-size: 13px;
+  width: 26px;
+  height: 26px;
+  color: #999999;
+  border-radius: 20px;
+  background-color: #f5f5f5;
+  transition: color 0.2s ease, background-color 0.2s ease !important;
+}
+.quantity .quantity-button::-moz-selection {
+  background: transparent;
+}
+.quantity .quantity-button::selection {
+  background: transparent;
+}
+.quantity .quantity-button:hover {
+  background: #52b7ff;
+  color: #fff;
+}
+.quantity .quantity-up {
+  right: 1px;
+  top: 1px;
+  z-index: 10;
+}
+.quantity .quantity-down {
+  left: 1px;
+  top: 1px;
+  z-index: 10;
+}
+
 .row {
   width: 100%;
   display: flex !important;
@@ -2755,58 +2809,6 @@ input[type=radio].form-control:checked {
   color: #f5f5f5;
   background-image: linear-gradient(135deg, #f99ca7 10%, #f15062 100%);
 }
-#product-page .product .product-desc .product-seller .quantity {
-  position: relative;
-}
-#product-page .product .product-desc .product-seller .quantity input[type=number] {
-  z-index: 0;
-  width: 90px;
-  outline: none;
-  color: #616161;
-  border-radius: 15px;
-  padding: 5px 0;
-  padding-right: 40px;
-  border: 1px solid gainsboro;
-  -moz-appearance: textfield;
-}
-#product-page .product .product-desc .product-seller .quantity input[type=number]::-webkit-outer-spin-button, #product-page .product .product-desc .product-seller .quantity input[type=number]::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
-}
-#product-page .product .product-desc .product-seller .quantity .quantity-button {
-  display: flex;
-  position: absolute;
-  cursor: pointer;
-  align-items: center;
-  justify-content: center;
-  font-size: 13px;
-  width: 26px;
-  height: 26px;
-  color: #999999;
-  border-radius: 20px;
-  background-color: #f5f5f5;
-  transition: color 0.2s ease, background-color 0.2s ease !important;
-}
-#product-page .product .product-desc .product-seller .quantity .quantity-button::-moz-selection {
-  background: transparent;
-}
-#product-page .product .product-desc .product-seller .quantity .quantity-button::selection {
-  background: transparent;
-}
-#product-page .product .product-desc .product-seller .quantity .quantity-button:hover {
-  background: #52b7ff;
-  color: #fff;
-}
-#product-page .product .product-desc .product-seller .quantity .quantity-up {
-  right: 1px;
-  top: 1px;
-  z-index: 10;
-}
-#product-page .product .product-desc .product-seller .quantity .quantity-down {
-  left: 1px;
-  top: 1px;
-  z-index: 10;
-}
 #product-page .tabs {
   width: 100%;
 }
@@ -3190,4 +3192,47 @@ input[type=radio].form-control:checked {
 }
 #profile .profile-personal-info .form-control {
   background-color: #ffffff !important;
+}
+
+#cart {
+  border-radius: 15px;
+}
+#cart .shoping-items {
+  border-collapse: collapse;
+}
+#cart .shoping-items .shoping-item .product-img {
+  width: 60px;
+  height: 60px;
+}
+#cart .shoping-items .shoping-item .product-img img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+#cart .checkout {
+  border-radius: 15px;
+  margin-top: 60px;
+}
+#cart .empty-cart {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+#cart .empty-cart .content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+#cart .empty-cart .img {
+  width: 200px;
+}
+#cart .empty-cart .img img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
