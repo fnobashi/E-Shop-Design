@@ -96,57 +96,7 @@
                     color: #f5f5f5;
                     background-image: linear-gradient(135deg, #f99ca7 10%, #f15062 100%);
                 }
-                .quantity {
-                    position: relative;
-                    input[type="number"] {
-                        z-index: 0;
-                        width: 90px;
-                        outline: none;
-                        color: map-get($map: $colors, $key: "text");
-                        @include border-radius(15px);
-                        padding: 5px 0;
-                        padding-right: 40px;
-                        border: 1px solid darken($color: map-get($map: $colors, $key: "light"), $amount: 10%);
-                        -moz-appearance: textfield;
-                        &::-webkit-outer-spin-button,
-                        &::-webkit-inner-spin-button {
-                            -webkit-appearance: none;
-                            margin: 0;
-                        }
-                    }
-
-                    .quantity-button {
-                        display: flex;
-                        position: absolute;
-                        cursor: pointer;
-                        align-items: center;
-                        justify-content: center;
-                        font-size: 13px;
-                        width: 26px;
-                        height: 26px;
-                        color: map-get($map: $colors, $key: "gray");
-                        @include border-radius(20px);
-                        background-color: map-get($map: $colors, $key: "light");
-                        @include transition(color 0.2s ease, background-color 0.2s ease);
-                        &::selection {
-                            background: transparent;
-                        }
-                        &:hover {
-                            background: #52b7ff;
-                            color: #fff;
-                        }
-                    }
-                    .quantity-up {
-                        right: 1px;
-                        top: 1px;
-                        z-index: 10;
-                    }
-                    .quantity-down {
-                        left: 1px;
-                        top: 1px;
-                        z-index: 10;
-                    }
-                }
+             
             }
         }
     }
