@@ -1,0 +1,41 @@
+#product-comment-page {
+    @include border-radius(15px);
+
+    .product-image {
+        width: 100%;
+        height: 420px;
+        overflow: hidden;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+    }
+
+    .product-title{
+        padding: 10px 0;
+        border-bottom: 1px solid map-get($map: $colors, $key: "light");
+    }
+
+    .range{
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        .range-input{
+            width: 86%;
+            margin: 0 auto;
+        }
+        .range-steps{
+            color:map-get($map: $colors, $key: "text");
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            .range-step{
+                width: 25%;
+                 text-align: center;
+            }
+        }
+    }
+}

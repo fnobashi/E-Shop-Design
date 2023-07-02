@@ -1890,6 +1890,55 @@ input[type=number].form-control {
   -moz-appearance: textfield;
 }
 
+input[type=range].form-control {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+       appearance: none;
+  background: transparent;
+  cursor: pointer;
+  border: none;
+  padding: 0;
+  margin: 0;
+  outline: none;
+}
+input[type=range].form-control::-webkit-slider-runnable-track {
+  -webkit-appearance: none;
+  appearance: none;
+  background-color: gainsboro;
+  height: 7px;
+  border: none;
+  border-radius: 7px;
+}
+input[type=range].form-control::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  margin-top: -7px;
+  border: 2px solid white;
+  border-radius: 50%;
+  background-color: #474747;
+}
+input[type=range].form-control::-moz-range-track {
+  background-color: gainsboro;
+  height: 7px;
+  border: none;
+  border-radius: 7px;
+}
+input[type=range].form-control::-moz-range-progress {
+  background-color: #24c0df;
+  height: 7px;
+  border: none;
+  border-radius: 7px;
+}
+input[type=range].form-control::-moz-range-thumb {
+  width: 20px;
+  height: 20px;
+  border: 2px solid white;
+  border-radius: 50%;
+  background-color: #474747;
+}
+
 input[type=radio].form-control {
   -webkit-appearance: none;
      -moz-appearance: none;
@@ -3008,6 +3057,45 @@ input[type=radio].form-control:checked {
 }
 #product-page .tabs .tab-box .tab-nav .tab-item a.active {
   color: #651fff;
+}
+
+#product-comment-page {
+  border-radius: 15px;
+}
+#product-comment-page .product-image {
+  width: 100%;
+  height: 420px;
+  overflow: hidden;
+}
+#product-comment-page .product-image img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+#product-comment-page .product-title {
+  padding: 10px 0;
+  border-bottom: 1px solid #f5f5f5;
+}
+#product-comment-page .range {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+#product-comment-page .range .range-input {
+  width: 86%;
+  margin: 0 auto;
+}
+#product-comment-page .range .range-steps {
+  color: #616161;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+#product-comment-page .range .range-steps .range-step {
+  width: 25%;
+  text-align: center;
 }
 
 #login-signup-page {
