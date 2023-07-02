@@ -36,6 +36,64 @@ input[type=number].form-control {
   -moz-appearance: textfield;
 }
 
+input[type="range"].form-control {
+    -webkit-appearance: none;
+    appearance: none;
+    background: transparent;
+    cursor: pointer;
+    border:none;
+    padding: 0;
+    margin: 0;
+    outline: none;
+
+
+    &::-webkit-slider-runnable-track{
+        -webkit-appearance: none;
+        appearance: none;
+        background-color: darken($color: map-get($colors , "light"), $amount: 10%);
+        height: 7px;
+        border:none;
+        @include border-radius(7px);
+    }
+
+    &::-webkit-slider-thumb{
+        -webkit-appearance: none;
+        appearance: none;
+        width: 20px;
+        height: 20px;
+        margin-top:-7px;
+        border: 2px solid lighten($color: map-get($colors , "light"), $amount: 10%);
+        @include border-radius(50%);
+        background-color: map-get($map: $colors, $key: "dark-gray");
+    }
+
+    &::-moz-range-track{
+        background-color: darken($color: map-get($colors , "light"), $amount: 10%);
+        height: 7px;
+        border:none;
+        @include border-radius(7px);
+    }   
+
+    &::-moz-range-progress{
+        background-color: map-get($map: $colors, $key: "lightblue");
+        height:7px;
+        border:none;
+        @include border-radius(7px);
+    }
+
+    &::-moz-range-thumb{
+        width: 20px;
+        height: 20px;
+        border: 2px solid lighten($color: map-get($colors , "light"), $amount: 10%);
+        @include border-radius(50%);
+        background-color: map-get($map: $colors, $key: "dark-gray");
+    }
+
+
+
+}
+
+
 select.form-control{
     @extend %form-control;
 }
@@ -76,3 +134,4 @@ input[type='radio'].form-control{
         margin: 3px 0;
     }
 }
+
