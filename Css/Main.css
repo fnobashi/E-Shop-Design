@@ -1978,6 +1978,70 @@ input[type=radio].form-control:checked {
   margin: 3px 0;
 }
 
+.form-checkbox {
+  cursor: pointer;
+  display: flex;
+  -webkit-tap-highlight-color: transparent;
+  transform: translate3d(0, 0, 0) !important;
+}
+.form-checkbox .fancy-checkbox {
+  margin: 0 20px;
+  position: relative;
+}
+.form-checkbox .fancy-checkbox::before {
+  content: "";
+  position: absolute;
+  top: -15px;
+  left: -15px;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: rgba(34, 50, 84, 0.03);
+  opacity: 0;
+  transition: opacity 0.2s ease !important;
+}
+.form-checkbox .fancy-checkbox:hover::before {
+  opacity: 1;
+}
+.form-checkbox .fancy-checkbox:hover svg {
+  stroke: #4285f4;
+}
+.form-checkbox .fancy-checkbox svg {
+  position: relative;
+  z-index: 1;
+  fill: none;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke: #c8ccd4;
+  stroke-width: 1.5;
+  transform: translate3d(0, 0, 0) !important;
+  transition: all 0.2 ease !important;
+}
+.form-checkbox .fancy-checkbox svg path {
+  stroke-dasharray: 60;
+  stroke-dashoffset: 0;
+}
+.form-checkbox .fancy-checkbox svg polyline {
+  stroke-dasharray: 22;
+  stroke-dashoffset: 66;
+}
+
+.form-control[type=checkbox] {
+  display: none;
+}
+.form-control[type=checkbox]:checked + .form-checkbox svg {
+  stroke: #4285f4;
+}
+.form-control[type=checkbox]:checked + .form-checkbox svg path {
+  stroke-dashoffset: 60;
+  transition: all 0.3s linear !important;
+}
+.form-control[type=checkbox]:checked + .form-checkbox svg polyline {
+  stroke-dashoffset: 42;
+  transition: all 0.2s linear !important;
+  transition-delay: 0.15s;
+}
+
 #site-header {
   padding: 15px;
   background-color: #fff;
@@ -3344,4 +3408,44 @@ input[type=radio].form-control:checked {
   height: 100%;
   -o-object-fit: contain;
      object-fit: contain;
+}
+
+#search-page .product-archive {
+  border-radius: 15px;
+}
+#search-page .product-archive .archive-links {
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+#search-page .product-archive .archive-links .archive-link {
+  margin: 0 10px;
+}
+#search-page .product-archive .archive-links .archive-link a {
+  color: #616161;
+  transition: color 0.2s ease-in-out !important;
+}
+#search-page .product-archive .archive-links .archive-link a.active {
+  color: #24c0df;
+}
+#search-page .product-archive .archive-links .archive-link a:hover {
+  color: #24c0df;
+}
+#search-page .search-result .search-item {
+  border-radius: 15px;
+}
+#search-page .search-result .search-item .search-image {
+  width: 100%;
+  height: 200px;
+}
+#search-page .search-result .search-item .search-image img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+#search-page .side-bar .search-layout {
+  border-radius: 15px;
+  margin-bottom: 20px;
+  padding: 15px;
 }
