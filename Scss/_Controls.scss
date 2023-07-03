@@ -1,39 +1,41 @@
-%form-control{
+%form-control {
     width: 100%;
     display: block;
-    background-color:map-get($map: $colors ,  $key: "light");
-    border:1px solid darken($color: map-get($colors , "light") , $amount: 10%);
+    background-color: map-get($map: $colors , $key: "light");
+    border: 1px solid darken($color: map-get($colors , "light"), $amount: 10%);
     @include border-radius(15px);
-    outline:none !important;
-    font-family: "VazirFarsiDigits"  , "Vazir" !important;
+    outline: none !important;
+    font-family: "VazirFarsiDigits", "Vazir" !important;
     font-size: 1rem;
-    color:map-get($map: $colors, $key: "dark-gray");
+    color: map-get($map: $colors, $key: "dark-gray");
     font-weight: 300;
     padding: 10px;
     @include transition(border-color .3s ease);
-    &:focus{
+
+    &:focus {
         border-color: map-get($map: $colors, $key: "lightblue");
     }
 }
-textarea.form-control{
-    @extend %form-control;  
+
+textarea.form-control {
+    @extend %form-control;
     @include border-radius(15px 15px 15px 0);
     resize: vertical !important;
-}   
+}
 
-input.form-control{
+input.form-control {
     @extend %form-control;
 }
 
 
 input.form-control::-webkit-outer-spin-button,
 input.form-control::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
+    -webkit-appearance: none;
+    margin: 0;
 }
 
 input[type=number].form-control {
-  -moz-appearance: textfield;
+    -moz-appearance: textfield;
 }
 
 input[type="range"].form-control {
@@ -41,47 +43,47 @@ input[type="range"].form-control {
     appearance: none;
     background: transparent;
     cursor: pointer;
-    border:none;
+    border: none;
     padding: 0;
     margin: 0;
     outline: none;
 
 
-    &::-webkit-slider-runnable-track{
+    &::-webkit-slider-runnable-track {
         -webkit-appearance: none;
         appearance: none;
         background-color: darken($color: map-get($colors , "light"), $amount: 10%);
         height: 7px;
-        border:none;
+        border: none;
         @include border-radius(7px);
     }
 
-    &::-webkit-slider-thumb{
+    &::-webkit-slider-thumb {
         -webkit-appearance: none;
         appearance: none;
         width: 20px;
         height: 20px;
-        margin-top:-7px;
+        margin-top: -7px;
         border: 2px solid lighten($color: map-get($colors , "light"), $amount: 10%);
         @include border-radius(50%);
         background-color: map-get($map: $colors, $key: "dark-gray");
     }
 
-    &::-moz-range-track{
+    &::-moz-range-track {
         background-color: darken($color: map-get($colors , "light"), $amount: 10%);
         height: 7px;
-        border:none;
-        @include border-radius(7px);
-    }   
-
-    &::-moz-range-progress{
-        background-color: map-get($map: $colors, $key: "lightblue");
-        height:7px;
-        border:none;
+        border: none;
         @include border-radius(7px);
     }
 
-    &::-moz-range-thumb{
+    &::-moz-range-progress {
+        background-color: map-get($map: $colors, $key: "lightblue");
+        height: 7px;
+        border: none;
+        @include border-radius(7px);
+    }
+
+    &::-moz-range-thumb {
         width: 20px;
         height: 20px;
         border: 2px solid lighten($color: map-get($colors , "light"), $amount: 10%);
@@ -94,11 +96,11 @@ input[type="range"].form-control {
 }
 
 
-select.form-control{
+select.form-control {
     @extend %form-control;
 }
 
-input[type='radio'].form-control{
+input[type='radio'].form-control {
     appearance: none;
     width: 5px;
     height: 5px;
@@ -108,14 +110,15 @@ input[type='radio'].form-control{
     border: 3px solid #fff;
     border-color: #fff !important;
     outline: 1px solid map-get($map: $colors, $key: "primary") !important;
-    &:checked{
-        background-color: map-get($map: $colors, $key: "primary") ;
+
+    &:checked {
+        background-color: map-get($map: $colors, $key: "primary");
     }
 }
 
-.btn{
+.btn {
     padding: 10px 20px;
-    font-family: "VazirWithoutLatin" , Vazir , Yekan;
+    font-family: "VazirWithoutLatin", Vazir, Yekan;
     font-size: 14px;
     color: #000;
     @include border-radius(100px);
@@ -124,14 +127,96 @@ input[type='radio'].form-control{
     cursor: pointer;
 }
 
-.form-group{
+.form-group {
     margin: 20px 0;
     display: flex;
     flex-direction: column;
     align-items: stretch;
     justify-content: flex-start;
-    *{
+
+    * {
         margin: 3px 0;
     }
 }
 
+
+
+.form-checkbox {
+    cursor: pointer;
+    display: flex;
+    -webkit-tap-highlight-color: transparent;
+    @include transform(translate3d(0,0,0));
+    .fancy-checkbox {
+        margin: 0 20px;
+        position: relative;
+
+        &::before {
+            content: "";
+            position: absolute;
+            top: -15px;
+            left: -15px;
+            width: 48px;
+            height: 48px;
+            @include border-radius(50%);
+            background: rgba(34, 50, 84, 0.03);
+            opacity: 0;
+            @include transition(opacity 0.2s ease);
+        }
+
+        &:hover {
+            &::before {
+                opacity: 1;
+            }
+
+            svg {
+                stroke: #4285f4;
+            }
+
+        }
+
+        svg {
+            position: relative;
+            z-index: 1;
+            fill: none;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+            stroke: #c8ccd4;
+            stroke-width: 1.5;
+            @include transform(translate3d(0,0,0));
+            @include transition(all 0.2 ease);
+            path {
+                stroke-dasharray: 60;
+                stroke-dashoffset: 0;
+            }
+
+            polyline {
+                stroke-dasharray: 22;
+                stroke-dashoffset: 66;
+            }
+        }
+    }
+}
+
+
+.form-control[type="checkbox"] {
+    display: none;
+
+    &:checked {
+        &+.form-checkbox {
+            svg {
+                stroke: #4285f4;
+
+                path {
+                    stroke-dashoffset: 60;
+                    @include transition(all 0.3s linear);
+                }
+
+                polyline {
+                    stroke-dashoffset: 42;
+                    @include transition(all 0.2s linear);
+                    transition-delay: 0.15s;
+                }
+            }
+        }
+    }
+}
