@@ -1,6 +1,11 @@
 #profile {
     background-color: map-get($map: $colors, $key: "White");
     @include border-radius(15px);
+    .profile-main{
+        @include media-breakpoint-down(md){
+            margin-top: 20px;
+        }
+    }
 
     .profile-desc {
         @include border-radius(15px);
@@ -82,7 +87,7 @@
         th {
             padding: 10px 0;
         }
-
+        
     }
 
     .profile-favorites {

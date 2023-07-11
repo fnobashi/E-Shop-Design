@@ -61,6 +61,25 @@ $(document).ready(function () {
         autoplay: true,
         autoplayTimeout: 3000,
         autoplayHoverPause: true,
+        responsiveClass: true,
+        responsive: {
+            0: {
+                items: 1,
+                slideBy: 1,
+                autoplay: true,
+            },
+            768: {
+                items: 3,
+                slideBy: 1,
+                autoplay: true,
+            },
+            1200: {
+                items: 4,
+                slideBy: 1,
+                autoplay: true,
+            },
+          
+        }
     });
 
     $(".namad-logo-slider").owlCarousel({
@@ -88,9 +107,68 @@ $(document).ready(function () {
     $("label.form-checkbox").prepend(checkboxElement);
 
     // toggles element to be show or hide based on a click 
-    // used in serach layout inside search page
+    // used in serach layout inside search page and site main responsive navigation 
     $("*[data-slide-toggle-click]").click(function (e) {
+        e.preventDefault();
+        $(this).toggleClass("show");
         $(this).next("*[data-slide-toggle]").slideToggle();
     });
 
+
+    // this is for showing responsive menu on click event
+    $(".responsive-menu-icon").click(function (e) {
+        e.preventDefault();
+        $(".responsive-site-navigation").css({
+            right: 0
+        });
+        $(".navigation-overlay").css({
+            display: "block"
+        });
+
+    });
+
+    // for closing menu when clicked outside menu and all of its childrens
+    $(document).on('click', function (event) {
+        let targetElement = $(event.target);
+        let isNavigationOpen  = $(".responsive-site-navigation").css("right") == "0px";
+
+        if (!targetElement.closest('.responsive-site-navigation').length && isNavigationOpen) {
+            $(".responsive-site-navigation").css({
+                right: "-255px"
+            });
+            $(".navigation-overlay").css({
+                display: "none"
+            });
+        }
+    });
+
+    $(".sort").click(function (e) { 
+        e.preventDefault();
+        $(".sort-items").css({
+            opacity: "1" , 
+            "z-index": "1000000" , 
+        });
+    });
+    $(document).on('click', function (event) {
+        let targetElement = $(event.target);
+        let isOpen  = $(".responsive-site-navigation").css("opacity") == "1";
+
+        if (!targetElement.closest('.sort').length && isOpen) {
+            $(".sort-items").css({
+                opacity: "0" , 
+                "z-index": "-1000000" , 
+            });
+        }
+    });
+
+    $(".filters").click(function (e) { 
+        e.preventDefault();
+        $(".search-filters").slideToggle();
+        
+    });
+
+    $(".search-filters .btn-close").click(function (e) { 
+        e.preventDefault();
+        $(".search-filters").slideToggle();
+    });
 });

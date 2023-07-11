@@ -1,6 +1,12 @@
 #product-comment-page {
     @include border-radius(15px);
 
+    .negative-comments{
+        @include media-breakpoint-down(md){
+            margin-top: 20px;
+        }
+    }
+
     .product-image {
         width: 100%;
         height: 420px;

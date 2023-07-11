@@ -22,6 +22,12 @@
         padding-left: 20px;
         width: 100%;
         height: 488px;
+        @include media-breakpoint-down(xl){
+            height: unset;
+        }
+        @include media-breakpoint-down(md){
+            padding-left:0 ;
+        }
         .adplace {
             width: 100%;
             height: 100%;
@@ -45,7 +51,6 @@
 
     .product-slider-container {
         width: 100%;
-        height: 500px;
         .product-slider {
             width: 100%;
             height: 100%;
@@ -98,6 +103,9 @@
         width: 100%;
         .adplace-wrapper {
             padding: 0 10px;
+            @include media-breakpoint-down(lg){
+                padding: 10px;
+            }
             .adplace-link {
                 width: 100%;
                 display: block;
@@ -111,7 +119,7 @@
                     @include border-radius(15px);
                     width: 100%;
                     height: 100%;
-                    object-fit: cover;
+                    object-fit: fill;
                 }
             }
         }

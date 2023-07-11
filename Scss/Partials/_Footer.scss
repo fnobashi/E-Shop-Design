@@ -6,6 +6,10 @@
             padding-right:65px;
             padding-top: 10px;
             position: relative;
+
+            @include media-breakpoint-down(lg){
+                margin: 10px auto;
+            }
             .item-icon{
                 position: absolute;
                 right: 0;
@@ -58,7 +62,7 @@
     }
 
     .namad-logo{
-        width: 100%;
+        width: 120px;
         .namad-logo-wrapper{
             padding: 10px;
             width: 100%;

@@ -85,6 +85,7 @@ $(document).ready(function () {
         borderColour : "#eeeeee"  , 
         zoomWindowFadeIn: 300 ,
         zoomWindowFadeOut: 300 , 
+        responsive: true  ,
     });
 
     $(".product-image").click(function(e) {
@@ -100,6 +101,7 @@ $(document).ready(function () {
             borderColour: "#eeeeee",
             zoomWindowFadeIn: 300,
             zoomWindowFadeOut: 300,
+            responsive:true  , 
           });
         }, 100); // Delay initialization to ensure the image source has been updated
       });

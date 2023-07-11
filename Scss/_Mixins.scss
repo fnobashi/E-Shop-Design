@@ -122,8 +122,9 @@ $grid-breakpoints: (
     "xs" : 400px , 
     "sm" : 556px ,
     "md" : 768px  , 
-    "lg" : 1200px , 
-    "xl" : 1400px 
+    "lg" : 992px , 
+    "xl" : 1200px  ,
+    "xxl" : 1310px
 );
 
 @function GetBreakPoint($size) {

@@ -16,13 +16,13 @@
 
     $ColumnsClassName: "col-";
 
-    @for $index from 1 through $totalColumns {
+    @for $index from 0 through $totalColumns {
         .#{$ColumnsClassName}#{$index} {
             width: CalculateGridColumnsWidth($totalColumns, $index) !important;
         }
     }
 
-    @for $index from 1 through $totalColumns {
+    @for $index from 0 through $totalColumns {
 
         @each $size,
         $value in $grid-breakpoints {

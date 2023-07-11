@@ -5,8 +5,14 @@
     margin: 0 auto;
     width: 1300px;
 
-    @include media-breakpoint-down(lg) {
-        width: 99.2%;
+    @include media-breakpoint-down(xxl) {
+        width: 98.2%;
+    }
+    @include media-breakpoint-down(xl){
+        width: 96%;
+    }
+    @include media-breakpoint-down(lg){
+        width: 94%;
     }
 }
 
@@ -264,5 +270,11 @@ fixed;
         left: 1px;
         top: 1px;
         z-index: 10;
+    }
+}
+
+.md-hide{
+    @include media-breakpoint-down(md){
+        display: none;
     }
 }

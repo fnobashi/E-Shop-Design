@@ -1,34 +1,43 @@
-#search-page{
-    .product-archive{
+#search-page {
+    .product-archive {
         @include border-radius(15px);
-        .archive-links{
+        @include media-breakpoint-down(lg){
+            display: none;
+        }
+        .archive-links {
             width: 100%;
             display: flex;
             align-items: center;
-            .archive-link{
+
+            .archive-link {
                 margin: 0 10px;
-                a{
+
+                a {
                     color: map-get($map: $colors, $key: "text");
                     @include transition(color .2s ease-in-out);
-                    &.active{
-                        color:map-get($map: $colors, $key: "lightblue");
-                        
+
+                    &.active {
+                        color: map-get($map: $colors, $key: "lightblue");
+
                     }
-                    &:hover{
-                        color:map-get($map: $colors, $key: "lightblue");
+
+                    &:hover {
+                        color: map-get($map: $colors, $key: "lightblue");
                     }
                 }
             }
         }
     }
 
-    .search-result{
-        .search-item{
+    .search-result {
+        .search-item {
             @include border-radius(15px);
-            .search-image{
+
+            .search-image {
                 width: 100%;
                 height: 200px;
-                img{
+
+                img {
                     width: 100%;
                     height: 100%;
                     object-fit: contain;
@@ -37,12 +46,89 @@
         }
     }
 
-    .side-bar{
-        .search-layout{
+    .responsive-search {
+        display: none;
+        @include media-breakpoint-down(lg){
+            display: block;
+        }
+        .sort {
+            position: relative;
+
+            .sort-items {
+                position: absolute;
+                top: 40px;
+                z-index: -100000;
+                opacity: 0;
+                background-color: map-get($map: $colors, $key: "White");
+                width: 150px;
+                @include border-radius(15px);
+
+                .sort-item {
+                    text-align: center;
+                    color: map-get($map: $colors, $key: "text");
+
+                    a {
+                        padding: 5px 10px;
+                        width: 100%;
+                        height: 100%;
+                        display: block;
+                        color: map-get($map: $colors, $key: "text");
+                        @include transition(color .3s ease, background-color .3s ease);
+                        @include border-radius(15px);
+
+                        &.active {
+                            color: map-get($map: $colors, $key: "lightblue");
+                        }
+
+                        &:hover {
+                            background-color: map-get($map: $colors, $key: "gray");
+                            color: map-get($map: $colors, $key: 'light');
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .side-bar {
+        display: block;
+        &.search-filters {
+
+            @include media-breakpoint-down(lg) {
+                position: fixed !important;
+                display: none;
+                inset: 0 !important;
+                background-color: map-get($map: $colors, $key: "White") !important;
+                z-index: 1000000 !important;
+                width: 100% !important;
+                height: 100%;
+                padding: 30px;
+            }
+
+            .responsive-header {
+                display: none;
+                justify-content: space-between;
+
+                @include media-breakpoint-down(lg) {
+                    display: flex;
+                }
+            }
+        }
+
+        @include media-breakpoint-down(lg) {
+            display: none;
+        }
+
+        .side-bar-container {
+            position: -webkit-sticky;
+            position: sticky;
+            top: 20px;
+        }
+
+        .search-layout {
             @include border-radius(15px);
             margin-bottom: 20px;
             padding: 15px;
         }
     }
-
 }
