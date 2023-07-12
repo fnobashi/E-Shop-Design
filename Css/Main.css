@@ -156,19 +156,6 @@ body {
   background-color: #f5f5f5;
 }
 
-body.theme-dark .color-dark-theme-primary {
-  color: #040A0E !important;
-}
-body.theme-dark .bg-color-dark-theme-primary {
-  background-color: #040A0E !important;
-}
-body.theme-dark .border-color-dark-theme-primary {
-  border-color: #040A0E !important;
-}
-body.theme-dark .btn-dark-theme-primary {
-  background-color: #040A0E !important;
-}
-
 .color-White {
   color: #ffffff !important;
 }

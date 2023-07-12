@@ -96,27 +96,6 @@
     }
 }
 
-@mixin setThemeStyles($theme){
-    @if($theme != "dark" and $theme != "light"){
-        @error "The Argument $theme is wrong it can only take one of 'light' or 'dark' values";
-    }
-
-    $selector : &;
-    @if($selector == "body"){
-            @at-root body.theme-#{$theme}{
-                @content;
-        }
-    }
-    @else{
-            @at-root body.theme-#{$theme} #{$selector}{
-                @content;
-            } 
-    }
-}
-
-
-
-
 
 $grid-breakpoints: (
     "xs" : 400px , 
@@ -154,10 +133,6 @@ $grid-breakpoints: (
     }
 }
 
-
-@function LoopCalculation($Iteration, $ValueToCalculate, $val) {
-    @return $val+($Iteration * $ValueToCalculate);
-}
 
 
 @function get-first-letter($var) {

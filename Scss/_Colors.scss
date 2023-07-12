@@ -19,26 +19,6 @@ $darkThemeColors:(
 );
 
 
-@include setThemeStyles("dark") {
-    @each $colorName,
-    $color in $darkThemeColors {
-        .color-#{$colorName} {
-            color: $color !important;
-        }
-
-        .bg-color-#{$colorName} {
-            background-color: $color !important;
-        }
-
-        .border-color-#{$colorName} {
-            border-color: $color !important;
-        }
-
-        .btn-#{$colorName} {
-            background-color: $color !important;
-        }
-    }
-}
 
 
 @each $colorName,
