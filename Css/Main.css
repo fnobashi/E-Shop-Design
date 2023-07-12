@@ -1335,7 +1335,6 @@ body.theme-dark .btn-dark-theme-primary {
 
 .line-sticktrough {
   text-decoration-line: line-through !important;
-  -moz-text-decoration-line: line-through !important;
 }
 
 .font-weight-100 {
@@ -1412,6 +1411,8 @@ body.theme-dark .btn-dark-theme-primary {
   padding-right: 40px;
   border: 1px solid gainsboro;
   -moz-appearance: textfield;
+  -webkit-appearance: textfield;
+          appearance: textfield;
 }
 .quantity input[type=number]::-webkit-outer-spin-button, .quantity input[type=number]::-webkit-inner-spin-button {
   -webkit-appearance: none;

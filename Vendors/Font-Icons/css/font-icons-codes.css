@@ -54,11 +54,13 @@
 .site-icon-left-arrow:before { content: '\f007'; } /* '' */
 .site-icon-menu:before { content: '\f008'; } /* '' */
 .site-icon-trash-2:before { content: '\f083'; } /* '' */
+.site-icon-filter:before { content: '\f0b0'; } /* '' */
 .site-icon-list:before { content: '\f0ca'; } /* '' */
 .site-icon-angle-left:before { content: '\f104'; } /* '' */
 .site-icon-angle-right:before { content: '\f105'; } /* '' */
 .site-icon-angle-up:before { content: '\f106'; } /* '' */
 .site-icon-angle-down:before { content: '\f107'; } /* '' */
+.site-icon-sort:before { content: '\f160'; } /* '' */
 .site-icon-shopping-bag:before { content: '\f290'; } /* '' */
 .site-icon-address-card:before { content: '\f2bb'; } /* '' */
 .site-icon-address-card-o:before { content: '\f2bc'; } /* '' */
