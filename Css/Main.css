@@ -3179,6 +3179,9 @@ input[type=radio].form-control:checked {
   color: #f5f5f5;
   background-image: linear-gradient(135deg, #f99ca7 10%, #f15062 100%);
 }
+#product-page .product .product-desc .product-seller .btn-add-to-cart.no-resource {
+  background-image: linear-gradient(135deg, #646464 10%, #242424 100%);
+}
 #product-page .tabs {
   width: 100%;
 }

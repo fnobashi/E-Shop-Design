@@ -95,6 +95,9 @@
                     }
                 }
                 .btn-add-to-cart {
+                    &.no-resource{
+                        background-image: linear-gradient(135deg, #646464 10%, #242424 100%);
+                    }
                     width: 100%;
                     @include border-radius(20px);
                     font-size: 14px;
